@@ -29,7 +29,12 @@ Tingues en compte que, encara que la pàgina de Wikipedia no té restriccions de
 */
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
-
+function JSDataUsingThen() {
+ fetch('https://en.wikipedia.org/w/api.php?action=opensearch&search=JavaScript&format=json&origin=*')
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
+JSDataUsingThen();
 
 /**
  * TEST
